@@ -23,7 +23,7 @@ class AttManager:
             for att in self.attendance_list:
                 if name in att:
                     i = att.index(name)
-                    self.attendance_list[i][1] = timestamp
+                    self.attendance_list[i+1][1] = timestamp
                     found_user = True
             if not found_user:
                 self.index.append(len(self.index)+1)
@@ -33,7 +33,7 @@ class AttManager:
             for att in self.attendance_list:
                 if name in att:
                     i = att.index(name)
-                    self.attendance_list[i][2] = timestamp
+                    self.attendance_list[i+1][2] = timestamp
                     found_user = True
             if not found_user:
                 self.index.append(len(self.index)+1)
